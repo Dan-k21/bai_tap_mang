@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="b1()">Câu 1</button>
+<button onclick="b2()">Câu 2</button>
+<button onclick="b3()">Cấu 3</button>
+<button onclick="b4()">Câu 4</button>
+<button onclick="b5()">Câu 5</button>
+<button onclick="b6()">Câu 6</button>
+<button onclick="b7()">Câu 7</button>
+<button onclick="b8()">Câu 8</button>
+<button onclick="b9()">Câu 9</button>
+<button onclick="b10()">Câu 10</button>
+<script>
+    let number = [1, 7, 5, 2, 9, 6];
+
+    function b1() {
+        for (let i = 0; i < number.length; i++) {
+            console.log(number[i])
+        }
+    }
+
+    function b2() {
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 === 0) {
+                console.log(number[i]);
+            }
+        }
+    }
+
+    function b3() {
+        for (let i = 0; i < number.length; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+        }
+    }
+
+    function b4() {
+        let tong = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 === 0) {
+                tong = tong + number[i];
+            }
+        }
+        console.log(tong)
+    }
+
+    function b5() {
+        let tong = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] > 10) {
+                tong = tong + number[i];
+            }
+        }
+        console.log(tong)
+    }
+
+    function b6() {
+        let tong = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 7 === 2) {
+                tong = tong + number[i]
+            }
+        }
+        console.log(tong)
+    }
+
+    function b7() {
+        let Max = number[0]
+        for (let i = 0; i < number.length; i++) {
+            if (Max < number[i]) {
+                Max = number[i];
+            }
+        }
+        console.log(Max)
+    }
+
+    function b8() {
+        let Max = number[0]
+        for (let i = 0; i < number.length; i++) {
+            if (Max < number[i] && number[i] % 2 === 0) {
+                Max = number[i];
+            }
+        }
+        console.log(Max)
+    }
+
+    function b9() {
+        let soLuong = [];
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 5 === 0) {
+                soLuong.push(number[i])
+            }
+        }
+        console.log(soLuong.length)
+    }
+
+    function b10() {
+        let tong = 0
+        count = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 === 0) {
+                tong = tong + number[i];
+                count ++
+            }
+        }
+        let trungBinh = tong / count;
+        console.log(trungBinh)
+    }
+</script>
+</body>
+</html>

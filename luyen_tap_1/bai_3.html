@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let Z = [1,5,9,6,4];
+  let Max = Z[0];
+  let count = 0;
+  let tong = 0;
+  for (let i = 0; i < Z.length; i++) {
+    if (Z[i] > Max) {
+      Max = Z[i];
+    }
+    tong = tong + Z[i];
+    count ++;
+  }
+  console.log('Max: ' + Max + '      Trung Bình: ' + tong/count)
+</script>
+</body>
+</html>
